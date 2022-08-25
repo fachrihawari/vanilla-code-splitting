@@ -1,5 +1,3 @@
-import './style.css';
-
 import { setText } from './utils';
 import { setupCounter } from './counter.js';
 
