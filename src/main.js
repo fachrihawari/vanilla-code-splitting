@@ -1,5 +1,6 @@
-import { getElement, setText } from './utils';
+import { getElement } from './utils';
 import { setupCounter } from './counter.js';
+import { setupFactorial } from './factorial';
 import { setupTypeWriter } from './type-writer';
 
 // Elements
@@ -16,16 +17,8 @@ const state = {
 // Setup counter module
 setupCounter(counterButton, state);
 
-// Split the factorial module from the main bundle
-import('./factorial')
-  .then(({ setupFactorial }) => {
-    // Setup factorial module
-    setupFactorial(factorialButton, state);
-  })
-  .catch(() => {
-    // Show error if failed to load the module
-    setText(factorialButton, 'Failed to load the factorial module');
-  });
+// Setup factorial module
+setupFactorial(factorialButton, state);
 
-// Setup type writer module, load bundle by event
-setupTypeWriter(titleHeading, "Hello Code Splitting");
+// Setup type writter module
+setupTypeWriter(titleHeading, "Hello Code Splitting!");

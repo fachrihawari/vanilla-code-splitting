@@ -1,3 +1,5 @@
+import TypewriterEffect from 'typewriter-effect/dist/core';
+
 /**
  * Setup type writer effect to the element when element clicked
  * @param {HTMLElement} element
@@ -10,18 +12,12 @@ export function setupTypeWriter(element, text) {
    */
   let typeWritter = null
   let isTyping = false
-  
+
   const toggleTypeWritter = async () => {
     if (!typeWritter) {
-      try {
-        const module = await import('typewriter-effect/dist/core')
-
-        typeWritter = new module.default(element, {
-          loop: true,
-        });
-      } catch (error) {
-        console.log("Opps failed to load typewritter-effect")
-      }
+      typeWritter = new TypewriterEffect(element, {
+        loop: true,
+      });
     }
 
     if (isTyping) {
@@ -33,6 +29,6 @@ export function setupTypeWriter(element, text) {
       isTyping = true
     }
   }
-  
+
   element.addEventListener('click', toggleTypeWritter)
 }
