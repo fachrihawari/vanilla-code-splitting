@@ -1,1 +1,0 @@
-import{s as c}from"./index.9a536836.js";function a(r){return r===0||r===1?1:r*a(r-1)}function f(r,t){const o=()=>{t.factorial=a(t.counter),c(r,`Factorial ${t.factorial}`)};r.addEventListener("click",o),o()}export{f as setupFactorial};
