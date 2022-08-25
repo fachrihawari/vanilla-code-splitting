@@ -1,9 +1,11 @@
 import { setText } from './utils';
 import { setupCounter } from './counter.js';
+import { setupTypeWriter } from './type-writer';
 
 // Elements
 const counterButton = document.querySelector('#counter-button');
 const factorialButton = document.querySelector('#factorial-button');
+const titleHeading = document.querySelector('#title-heading');
 
 // State
 const state = {
@@ -24,3 +26,6 @@ import('./factorial')
     // Show error if failed to load the module
     setText(factorialButton, 'Failed to load the factorial module');
   });
+
+// Setup type writer module, load bundle by event
+setupTypeWriter(titleHeading, "Hello Code Splitting");
