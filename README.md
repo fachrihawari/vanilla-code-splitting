@@ -1,3 +1,5 @@
-# vitejs-vite-atbq4r
+# Vanilla Code Splitting
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/vitejs-vite-atbq4r)
+## Benefits
+
+You will have smaller bundle size which mean faster page load
