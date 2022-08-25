@@ -1,11 +1,11 @@
-import { setText } from './utils';
+import { getElement, setText } from './utils';
 import { setupCounter } from './counter.js';
 import { setupTypeWriter } from './type-writer';
 
 // Elements
-const counterButton = document.querySelector('#counter-button');
-const factorialButton = document.querySelector('#factorial-button');
-const titleHeading = document.querySelector('#title-heading');
+const counterButton = getElement('#counter-button');
+const factorialButton = getElement('#factorial-button');
+const titleHeading = getElement('#title-heading');
 
 // State
 const state = {

@@ -6,3 +6,12 @@
 export function setText(el, text) {
   el.innerHTML = text;
 }
+
+/**
+ * Get element by query selector
+ * @param {string} selector 
+ * @returns {HTMLElement}
+ */
+export function getElement(selector) {
+  return document.querySelector(selector)
+}
