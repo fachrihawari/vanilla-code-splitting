@@ -6,9 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "visualize": "npm run build && open stats.html"
   },
   "devDependencies": {
+    "rollup-plugin-visualizer": "^5.8.0",
     "vite": "^3.0.9"
   },
   "dependencies": {
